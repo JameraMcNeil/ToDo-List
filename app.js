@@ -16,3 +16,22 @@ const renderList = () => {
     });
 
 }
+
+$(() => {
+    
+
+    $('form').on('submit', (e) => {
+
+       const $inputValue = $('#input-box').val();
+
+       list.push($inputValue)
+       
+        e.preventDefault();
+        $(e.currentTarget).trigger('reset');
+
+        renderList();
+
+    })
+
+
+})
